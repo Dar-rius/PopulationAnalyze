@@ -13,6 +13,7 @@ import seaborn as sns
 def calNumber(dataA, dataB):
     #merge series and display a graph
     dataTotal = pd.merge(dataA, dataB, on="Time", how='inner')
+    print(dataTotal.head())
     sns.lineplot(data=dataTotal) 
 
 
