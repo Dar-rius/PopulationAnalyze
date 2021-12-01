@@ -9,28 +9,45 @@ import seaborn as sns
 # in int, to display the 5 1st elements of the column to then merge 
 # the columns and create a new dataframe for at the end make a graph
 
-
-def calNumber(dataA, dataB):
+# pour un seul pays
+def calPopMaleFemale(dataM, dataF, dataCountry, dataT):
+    print(dataCountry)
+    print("Graph de la population masculine et femine et mondiale:")
     #merge series and display a graph
-    dataTotal = pd.merge(dataA, dataB, on="Time", how='inner')
+    print("Data male and female: ")
+    dataTotal = pd.merge(dataM, dataF, on="Time", how='inner')
     print(dataTotal.head())
+    print("Data sex total: ")
+    print(dataT.head())
     sns.lineplot(data=dataTotal) 
+    sns.lineplot(data=dataT)
 
-
+# pour un seul pays 
 def calNumberDecenies(dataA, dataB, dataC, dataD):
-    
+    print("Data male:")
+    print("DataA:")
+    print(dataA.head())
+    print("DataB:")
+    print(dataB.head())
     dataTotalMale = dataA+dataB
     dataTotalMaleFrame = pd.DataFrame(dataTotalMale)
+    print('dataTotal')
     print(dataTotalMaleFrame.head())
 
+    print("Data female:")
+    print("DataC:")
+    print(dataC.head())
+    print("DataD:")
+    print(dataD.head())
     dataTotalFemale = dataC+dataD
     dataTotalFemaleFrame = pd.DataFrame(dataTotalFemale)
+    print('dataTotal')
     print(dataTotalFemaleFrame.head())
     #merge series and display a graph
     dataTotal = pd.merge(dataTotalMaleFrame, dataTotalFemaleFrame, on="Time", how='inner')
     sns.lineplot(data=dataTotal) 
 
-
+# pour 10 pays 
 def calNumberDeceniesTotal(dataA, dataB, dataC, dataD):
     
     dataTotalMale = dataA+dataB
