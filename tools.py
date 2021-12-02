@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns 
-
+import numpy as np
 
 #A function allowing to convert two variables which contains 
 # the number of men and women according to a base age in float 
