@@ -16,44 +16,8 @@ def calPopMaleFemale(dataM, dataF, dataCountry, dataT):
     #merge series and display a graph
     print("Data male and female: ")
     dataTotal = pd.merge(dataM, dataF, on="Time", how='inner')
-    print(dataTotal.head())
+    print(dataTotal)
     print("Data sex total: ")
-    print(dataT.head())
+    print(dataT)
     sns.lineplot(data=dataTotal) 
     sns.lineplot(data=dataT)
-
-# pour un seul pays 
-def calNumberDecenies(dataA, dataB, dataC, dataD):
-    print("Data male:")
-    print("DataA:")
-    print(dataA.head())
-    print("DataB:")
-    print(dataB.head())
-    dataTotalMale = dataA+dataB
-    dataTotalMaleFrame = pd.DataFrame(dataTotalMale)
-    print('dataTotal')
-    print(dataTotalMaleFrame.head())
-
-    print("Data female:")
-    print("DataC:")
-    print(dataC.head())
-    print("DataD:")
-    print(dataD.head())
-    dataTotalFemale = dataC+dataD
-    dataTotalFemaleFrame = pd.DataFrame(dataTotalFemale)
-    print('dataTotal')
-    print(dataTotalFemaleFrame.head())
-    #merge series and display a graph
-    dataTotal = pd.merge(dataTotalMaleFrame, dataTotalFemaleFrame, on="Time", how='inner')
-    sns.lineplot(data=dataTotal) 
-
-# pour 10 pays 
-def calNumberDeceniesTotal(dataA, dataB, dataC, dataD):
-    
-    dataTotalMale = dataA+dataB
-    dataTotalFemale = dataC+dataD
-    dataTotal = dataTotalMale + dataTotalFemale
-    dataTotalFrame = pd.DataFrame(dataTotal)
-    print(dataTotalFrame.head())
-    #graph
-    sns.lineplot(data=dataTotal) 
