@@ -13,7 +13,8 @@ After loading the dataset and replacing the indexes with the Time columns.
 The data of the LocID variable was displayed for the purpose of identifying the IDs of each country, continent and organization and the whole thing makes a total of 443 IDs, then the data of the Location variable to see all the countries, continents and organizations. contained in the dataset.
 
 After all this I moved on to the population analysis, the objective was to observe the growth of populations from 0 to 100 years and over in each country and continent according to their sex and then with the sexes combined between the 1950s to 2100.
-
+![alt text]()
 To see graphs of other data I invite you to open the Analyze.ipynb file.
 
-After having analyzed the male and female populations of each country, continent and organization. I analyzed the data of the populations of each continent according to their sex and then sum the 2 sexes in order to compare the growth of the population of each continent
+After having analyzed the male and female populations of each country, continent and organization. I analyzed the data of the populations of each continent according to their sex and then sum the 2 sexes in order to compare the growth of the population of each continent.
+![alt text]()
