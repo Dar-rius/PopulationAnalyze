@@ -86,10 +86,10 @@ def continentTaux(popA, popB, popC, name ):
 
 
 
-def continentTauxAll(popAfric, popAsia, popEurope, popOceanic, popNafta, popLatin, popTotale):
+def continentTauxAll(popAfric, popAsia, popEurope, popOceanic, popNafta, popLatin , popTotale):
 
-    popAutre = (popAfric+popAsia+popEurope+popOceanic+popNafta+popLatin)-popTotale
-    tauxAutre = (100*popAutre)/popTotale
+    #popAutre = (popAfric+popAsia+popEurope+popOceanic+popNafta+popLatin)-popTotale
+    #tauxAutre = (100*popAutre)/popTotale
     tauxAfric = (100*popAfric)/popTotale
     tauxAsie = (100*popAsia)/popTotale
     tauxEu = (100*popEurope)/popTotale
@@ -97,53 +97,13 @@ def continentTauxAll(popAfric, popAsia, popEurope, popOceanic, popNafta, popLati
     tauxNaf = (100*popNafta)/popTotale
     tauxLatin = (100*popLatin)/popTotale
 
-    data = [tauxAfric,
-        tauxAsie,
-        tauxEu,
-        tauxOcean,
-        tauxNaf,
-        tauxLatin,
-        tauxAutre]
+    data = { "Afrique: ": tauxAfric,
+        "Asie " :tauxAsie,
+        "Europe " :tauxEu,
+        "Oceanique" :tauxOcean,
+        "Nafta " :tauxNaf,
+        "Amerique latine ":tauxLatin}
 
-    label = [
-        'Afrique',
-        'Asie',
-        'Europe',
-        'Oceanique',
-        'Amerique du nord',
-        'Amerique latine et caraibe',
-        'Autre'
-    ]
-
-#Visualisation des donnees
-    fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
-
-    recipe = ["Afrique: %.2f" %tauxAfric,
-            "Asie: %.2f" %tauxAsie,
-            "Europe: %.2f" %tauxEu,
-            "Oceanique: %.2f" %tauxOcean,
-            "Ameruique du nord: %.2f" %tauxNaf,
-            "Amerique latine et caraibe: %.2f" %tauxLatin,
-            "Autres: %.2f" %tauxAutre]
-
-    data = [tauxAfric, tauxAsie, tauxEu, tauxOcean, tauxNaf, tauxLatin, tauxAutre]
-
-    wedges, texts = ax.pie(data, wedgeprops=dict(width=0.5), startangle=-40)
-
-    bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
-    kw = dict(arrowprops=dict(arrowstyle="-"),
-            bbox=bbox_props, zorder=0, va="center")
-
-    for i, p in enumerate(wedges):
-        ang = (p.theta2 - p.theta1)/2. + p.theta1
-        y = np.sin(np.deg2rad(ang))
-        x = np.cos(np.deg2rad(ang))
-        horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
-        connectionstyle = "angle,angleA=0,angleB={}".format(ang)
-        kw["arrowprops"].update({"connectionstyle": connectionstyle})
-        ax.annotate(recipe[i], xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
-                    horizontalalignment=horizontalalignment, **kw)
-
-    ax.set_title(f"En global")
-
-    plt.show()
+    print("La part de chaque continent dans la populaton totale:")
+    for k, v in data.items():
+        print(f"{k}: {v}")
