@@ -9,8 +9,12 @@ The data are categorized between the different age groups from 0 to 100 years an
 For the analysis of this dataset, the functions (Times Series) were used.
 
 After loading the dataset and replacing the indexes with the Time columns.
+
 ![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/popSet.png)
+
 The data of the LocID variable was displayed for the purpose of identifying the IDs of each country, continent and organization and the whole thing makes a total of 443 IDs, then the data of the Location variable to see all the countries, continents and organizations. contained in the dataset.
+
+![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/ID.png)
 
 After all this I moved on to the population analysis, the objective was to observe the growth of populations from 0 to 100 years and over in each country and continent according to their sex and then with the sexes combined between the 1950s to 2100.
 To see graphs of other data I invite you to open the Analyze.ipynb file.
