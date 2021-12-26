@@ -25,7 +25,7 @@ After having analyzed the male and female populations of each continent. I  comp
 
 ![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/popT.png)
 
-The second step is the modeling, after the data encoding, their standardization, I developed a model that will be able to predict the total population in several years.
+The second stage is the modeling, after the data encoding, their standardization, I developed a model which will be able to predict the total population over several years, whose score during the evaluation is 99%.
 
 Then I visualized the comparison between the model prediction and the target.
 
