@@ -18,8 +18,14 @@ The data of the LocID variable was displayed for the purpose of identifying the 
 
 ![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/names.png)
 
-After all this I moved on to the population analysis, the objective was to observe the growth of populations from 0 to 100 years and over in each continent according to their sex then with the combined sexes between the years 1950 to 2100. To see the graphs of other data, I invite you to open the Analyze.ipynb file.
+After all this I moved on to the population analysis, the objective was to observe the growth of populations from 0 to 100 years and over in each continent according to their sex then with the combined sexes between the years 1950 to 2100. To see the graphs some data, I invite you to open the Analyze.ipynb file.
 
 After having analyzed the male and female populations of each continent. I  compared the growth of the population of each continent.
+
+![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/popT.png)
+
+The second step is the modeling, after the data encoding, their standardization, I developed a model that will be able to predict the total population in several years.
+
+Then I visualized the comparison between the model prediction and the target.
 
 ![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/popT.png)
