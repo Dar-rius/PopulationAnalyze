@@ -29,4 +29,4 @@ The second step is the modeling, after the data encoding, their standardization,
 
 Then I visualized the comparison between the model prediction and the target.
 
-![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/popT.png)
+![alt text](https://github.com/Dar-rius/PopulationAnalyze/blob/main/img/AI.png)
